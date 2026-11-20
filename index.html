@@ -214,7 +214,7 @@ const SHOPIFY={domain:'',token:'',collection:'',handles:[]};
 const HERO_URL='https://res.cloudinary.com/v87nlk9h/video/upload/v1795090047/WEBSITE_VIDEO.mp4'; /* Easiest: paste one full Cloudinary video link here (ending .mp4). It plays muted and loops forever. */
 const HERO_CLOUD={cloud:'v87nlk9h',clips:[]};
 /* Gallery from a Google Drive folder: public folder ID + Drive API key. Newest photos show first. Add or remove photos in the folder and the site updates itself (on refresh, or within 10 minutes). Name files "Name - celebrity - Piece worn.jpg" or "Name - customer - Piece worn.jpg". */
-const GALLERY={folderId:'',apiKey:''};
+const GALLERY={folderId:'1kHzC0_ZAFEiWihM01ppN4KIalvP3ci9p',apiKey:''}; /* apiKey: paste a Google Drive API key here (Google Cloud Console > Enable Drive API > Credentials > API key). Folder must be shared as Anyone with the link: Viewer. */
 /* Sign-ups: endpoint is a form/Apps Script link that stores them; whatsappInvite is your WhatsApp group link. */
 const COMMUNITY={endpoint:'',whatsappInvite:''};
 
@@ -313,7 +313,7 @@ async function checkout(){
 
 /* ---------- FOG gallery: loops across the screen, fed by a Google Drive folder ---------- */
 let GI=[0,1,2,3,4,5,6,7].map(i=>({n:i%2?'FOG client':'Celebrity',t:i%2?'Customer':'Celebrity',w:'',u:''})),GK='';
-const card=(g,dup)=>`<figure class="gi${dup?' dup':''}"${dup?' aria-hidden="true"':''}><div class="gp"><span class="sl">Photo</span>${g.u?`<img src="${esc(g.u)}" alt="${dup?'':esc(g.n)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:''}</div><figcaption><span class="eb gold">${g.t}</span><b>${esc(g.n)}</b>${g.w?`<span>${esc(g.w)}</span>`:''}</figcaption></figure>`;
+const card=(g,dup)=>`<figure class="gi${dup?' dup':''}"${dup?' aria-hidden="true"':''}><div class="gp">${g.u?`<img src="${esc(g.u)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:'<span class="sl">Photo</span>'}</div></figure>`;
 function drawRail(){let set=GI.slice();while(set.length<8||set.length%2)set=set.concat(GI);
  $('#rail').innerHTML='<div class="track" style="--d:'+Math.max(30,set.length*7)+'s">'+set.map(g=>card(g,0)).join('')+set.map(g=>card(g,1)).join('')+'</div>'}
 drawRail();
