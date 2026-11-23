@@ -1,12 +1,10 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#0E0E0F;color:#ECECEC}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>FOG Originals</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
 <style>
 /* Layout: giant FOG ORIGINALS header, hero video, four-product new collection that opens as an in-page product popup, gallery rail, sign-up, footer. Quiet luxury: Inter, hairlines, one muted gold. */
-:root{--bg:#F6F4F0;--ink:#15140F;--mute:#78746A;--line:rgba(21,20,15,.16);--stage:#E8E5DD;--stage2:#F1EFE9;--panel:#EFECE5;--gold:#9A7B3F;--f:'Inter','Helvetica Neue',Arial,sans-serif}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C0B09;--ink:#F1EEE6;--mute:#A29D90;--line:rgba(241,238,230,.16);--stage:#1A1815;--stage2:#24211D;--panel:#141210;--gold:#C9A96A;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0C0B09;--ink:#F1EEE6;--mute:#A29D90;--line:rgba(241,238,230,.16);--stage:#1A1815;--stage2:#24211D;--panel:#141210;--gold:#C9A96A;color-scheme:dark}
+:root{--bg:#0E0E0F;--ink:#ECECEC;--mute:#8F8F92;--line:rgba(236,236,236,.14);--stage:#19191A;--stage2:#262628;--panel:#141415;--gold:#B4B4B8;--f:'Inter','Helvetica Neue',Arial,sans-serif;color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--f);overflow-x:hidden;margin:0}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
@@ -15,16 +13,16 @@ button{cursor:pointer;background:none;border:0;padding:0}
 :focus-visible{outline:1.5px solid var(--gold);outline-offset:3px}
 .w{max-width:1360px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 .eb{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:400;color:var(--mute)}
-.gold{color:var(--gold)}
+.gold{color:var(--mute)}
 h1,h2,h3{font-weight:600;margin:0;letter-spacing:-.03em}
-h2 em{font-style:normal;color:var(--gold)}
+h2 em{font-style:normal;color:var(--mute)}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
 .hd{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding-block:14px}
 .logo{height:46px;display:block;color:var(--ink);justify-self:center}
 .logo svg{height:100%;width:auto;display:block}
 nav{display:flex;gap:30px}
 nav a,.cartbtn{font-size:11px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;color:var(--ink);white-space:nowrap}
-nav a:hover,.cartbtn:hover{color:var(--gold)}
+nav a:hover,.cartbtn:hover{color:var(--mute)}
 .cartbtn{justify-self:end}
 @media(max-width:760px){.hd{grid-template-columns:auto 1fr;row-gap:6px}.logo{justify-self:start;height:38px}.cartbtn{grid-column:2;grid-row:1}nav{grid-column:1/-1;grid-row:2;overflow-x:auto;gap:22px}}
 .btn{font-size:11px;letter-spacing:.24em;text-transform:uppercase;padding:16px 28px;border:1px solid var(--ink);text-decoration:none;display:inline-block;background:var(--ink);color:var(--bg);transition:.25s;text-align:center}
@@ -52,7 +50,7 @@ h2{font-size:clamp(30px,3.8vw,52px);line-height:1;margin-top:10px}
 .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .pc:hover .im img{transform:scale(1.03)}
 .pt{font-weight:500;font-size:16px;letter-spacing:-.01em}
-.pp{color:var(--mute);font-size:14px}
+.pc{cursor:pointer}.pc .btn{margin-top:12px;padding:13px 16px;width:100%}
 .cstat{margin:16px 0 0;color:var(--mute);font-size:13px}
 @media(max-width:900px){.coll{grid-template-columns:repeat(2,1fr)}}
 /* gallery */
@@ -90,7 +88,7 @@ footer{margin-top:100px;border-top:1px solid var(--line);background:var(--panel)
 .fg p{margin:0;color:var(--mute);max-width:34ch;font-size:14px}
 .fg h4{margin:0 0 14px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--mute)}
 .fg a{display:block;color:var(--ink);text-decoration:none;font-size:14px;padding:3px 0}
-.fg a:hover{color:var(--gold)}
+.fg a:hover{color:var(--mute)}
 .legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--mute);font-size:12.5px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media(max-width:800px){.fg{grid-template-columns:1fr 1fr}.fg>div:first-child{grid-column:1/-1}}
 /* overlays: bag, product popup, checkout */
@@ -240,17 +238,19 @@ dp(4,'G-Shock','GA-2100 Series',420000,['One size'],['Black','Sand'],'Sample pro
 const FRAG='fragment P on Product{id title vendor description options{name values} images(first:6){nodes{url}} variants(first:100){nodes{id title availableForSale price{amount currencyCode} selectedOptions{name value}}}}';
 async function sf(q,vars){const r=await fetch('https://'+SHOPIFY.domain+'/api/2025-01/graphql.json',{method:'POST',headers:{'Content-Type':'application/json','X-Shopify-Storefront-Access-Token':SHOPIFY.token},body:JSON.stringify({query:q,variables:vars||{}})}),j=await r.json();if(j.errors)throw new Error(JSON.stringify(j.errors));return j.data}
 const norm=p=>({id:p.id,title:p.title,vendor:p.vendor,desc:p.description,images:p.images.nodes.map(i=>i.url),options:p.options.filter(o=>!(o.name==='Title'&&o.values.length===1)),variants:p.variants.nodes.map(v=>({id:v.id,title:v.title,avail:v.availableForSale,amount:v.price.amount,cur:v.price.currencyCode,opts:Object.fromEntries(v.selectedOptions.map(o=>[o.name,o.value]))}))});
+const showColl=on=>{document.querySelectorAll('#collection,a[href="#collection"]').forEach(e=>e.hidden=!on)};
 async function loadShop(){if(!live())return;
+ showColl(false);
  try{let list;
-  if(SHOPIFY.collection){const d=await sf('query($h:String!){collection(handle:$h){products(first:4){nodes{...P}}}}'+FRAG,{h:SHOPIFY.collection});list=d.collection.products.nodes}
+  if(SHOPIFY.collection){const d=await sf('query($h:String!){collection(handle:$h){products(first:4){nodes{...P}}}}'+FRAG,{h:SHOPIFY.collection});list=d.collection?d.collection.products.nodes:[]}
   else{const d=await sf('query{'+SHOPIFY.handles.slice(0,4).map((h,i)=>'p'+i+':product(handle:'+JSON.stringify(h)+'){...P}').join(' ')+'}'+FRAG);list=Object.values(d).filter(Boolean)}
-  if(list.length){PRODUCTS=list.map(norm);drawColl();renderCart()}else $('#cstat').textContent='No products found yet. Showing sample products.'}
- catch(e){$('#cstat').textContent='Could not load the live collection. Showing sample products.'}}
+  if(list.length){PRODUCTS=list.map(norm);drawColl();renderCart();showColl(true)}else{PRODUCTS=[];renderCart()}}
+ catch(e){PRODUCTS=[]}}
 const imBox=(u,alt)=>`<div class="im"><span class="sl">Image</span>${u?`<img src="${esc(u)}" alt="${esc(alt)}" loading="lazy" onerror="this.remove()">`:''}</div>`;
 const fromPrice=p=>{const a=p.variants.map(v=>+v.amount),lo=Math.min(...a);return (Math.max(...a)>lo?'From ':'')+money(lo,p.variants[0].cur)};
-function drawColl(){$('#coll').innerHTML=PRODUCTS.slice(0,4).map((p,i)=>`<button class="pc" data-i="${i}">${imBox(p.images[0],p.title)}<span class="eb">${esc(p.vendor)}</span><span class="pt">${esc(p.title)}</span><span class="pp">${fromPrice(p)}</span></button>`).join('')}
-$('#coll').onclick=e=>{const b=e.target.closest('.pc');if(b)openProduct(+b.dataset.i)};
-drawColl();loadShop();
+function drawColl(){$('#coll').innerHTML=PRODUCTS.slice(0,4).map((p,i)=>`<div class="pc" data-i="${i}">${imBox(p.images[0],p.title)}<span class="eb">${esc(p.vendor)}</span><span class="pt">${esc(p.title)}</span><button class="btn" data-i="${i}">Buy now</button></div>`).join('')}
+$('#coll').onclick=e=>{const b=e.target.closest('[data-i]');if(b)openProduct(+b.dataset.i)};
+if(live())showColl(false);else drawColl();loadShop();
 
 /* ---------- popups ---------- */
 function ovSync(){const m=$('#modal').classList.contains('on'),d=$('#drawer').classList.contains('on');$('#ov').classList.toggle('on',m||d);$('#ov').style.zIndex=m?85:'';document.body.style.overflow=m||d?'hidden':''}
@@ -266,18 +266,18 @@ function openProduct(i){
  p.options.forEach(o=>sel[o.name]=o.values.length===1?o.values[0]:null);
  const cur=()=>p.variants.find(v=>p.options.every(o=>v.opts[o.name]===sel[o.name]));
  const ok=(name,val)=>p.variants.some(v=>v.avail&&v.opts[name]===val&&p.options.every(o=>o.name===name||sel[o.name]==null||v.opts[o.name]===sel[o.name]));
- openModal(`<div class="pd"><div class="pdl"><div id="pm"></div><div class="th" id="pth"></div></div><div class="pdr"><div><div class="eb gold">${esc(p.vendor)}</div><h3 style="margin-top:8px">${esc(p.title)}</h3></div><div class="pr" id="ppr"></div><div id="po" style="display:flex;flex-direction:column;gap:18px"></div><button class="btn" id="padd">Add to bag</button><p class="desc">${esc(p.desc||'')}</p><p class="desc">${live()?'Secure checkout by Shopify.':'Sample product. Checkout here is a demo.'}</p></div></div>`);
+ openModal(`<div class="pd"><div class="pdl"><div id="pm"></div><div class="th" id="pth"></div></div><div class="pdr"><div><div class="eb gold">${esc(p.vendor)}</div><h3 style="margin-top:8px">${esc(p.title)}</h3></div><div id="po" style="display:flex;flex-direction:column;gap:18px"></div><button class="btn" id="padd">Buy now</button><p class="desc">${esc(p.desc||'')}</p><p class="desc">${live()?'Secure checkout by Shopify.':'Sample product. Checkout here is a demo.'}</p></div></div>`);
  const draw=()=>{
   $('#pm').innerHTML=imBox(p.images[im],p.title);
   $('#pth').innerHTML=p.images.length>1?p.images.map((u,k)=>`<button data-k="${k}" aria-pressed="${k===im}" aria-label="Image ${k+1}"><img src="${esc(u)}" alt=""></button>`).join(''):'';
   $('#po').innerHTML=p.options.map(o=>`<div><div class="eb" style="margin-bottom:10px">${esc(o.name)}${sel[o.name]?' &nbsp;<span style="color:var(--ink)">'+esc(sel[o.name])+'</span>':''}</div><div class="fl">${o.values.map(v=>`<button class="chip" data-o="${esc(o.name)}" data-v="${esc(v)}" aria-pressed="${sel[o.name]===v}"${ok(o.name,v)?'':' disabled'}>${esc(v)}</button>`).join('')}</div></div>`).join('');
-  const v=cur();$('#ppr').textContent=v?money(v.amount,v.cur):fromPrice(p);
-  const b=$('#padd');b.disabled=!!v&&!v.avail;b.textContent=v&&!v.avail?'Sold out':'Add to bag'};
+  const v=cur();
+  const b=$('#padd');b.disabled=!!v&&!v.avail;b.textContent=v&&!v.avail?'Sold out':'Buy now'};
  draw();
  $('#pth').onclick=e=>{const b=e.target.closest('button');if(b){im=+b.dataset.k;draw()}};
  $('#po').onclick=e=>{const b=e.target.closest('.chip');if(b){sel[b.dataset.o]=b.dataset.v;draw()}};
  $('#padd').onclick=()=>{const v=cur();if(!v){toast('Please choose '+p.options.filter(o=>!sel[o.name]).map(o=>o.name.toLowerCase()).join(' and '));return}
-  addLine(v.id);closeModal();renderCart();cartOpen(true)}}
+  addLine(v.id);closeModal();renderCart();checkout()}}
 
 /* ---------- bag ---------- */
 let cart=[];try{cart=JSON.parse(localStorage.getItem('fogcart4')||'[]')}catch(e){}
